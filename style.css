@@ -1,0 +1,188 @@
+:root {
+	--primary-color: #4daf54;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #4daf55, #3d8880) ;
+}
+
+.container {
+    width: 320px;
+    height: 400px;
+    background-color: #272d40;
+    border-radius: 15px;
+    position: relative;
+    margin: 120px auto;
+    color: #ffff;
+    padding: 40px 20px;
+}
+
+.like, 
+.cart{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+.cart {
+    left: unset;
+    right: 20px;
+}
+
+
+.product-img {
+    width: 90%;
+    transition: 0.4s;
+}
+
+.product-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.product-name {
+    color: var(--primary-color);
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    transition: 0.4s;
+}
+
+.product-price {
+    color: #fff;
+    font-size: 26px;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.4s;
+    margin-top: 5px;
+}
+
+.product-buy-option {
+    margin-top: 160px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+
+}
+
+.product-buy-btn:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.product-size-opt,
+.product-color-opt {
+    margin-bottom: 15px;
+    cursor: default;
+}
+
+.product-size-opt li
+ {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.product-size-no {
+    list-style-type: none;
+    background-color: #DADADA;
+    color: #272d40;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.product-size-no:hover {
+    background-color: rgba(254, 254, 254, 0.7);
+}
+
+.product-size-text {
+    margin-right: 10px;
+}
+
+.product-color-text {
+    margin-right: 10px;
+    cursor: default;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.product-color-no {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: -5px;
+    border-radius: 50%;
+    margin: 0 2px;
+    cursor: pointer;
+}   
+
+.product-color-no:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Co the them class de don gian hoa */
+.product-color-opt .product-color-no:nth-child(2) {
+    background-color: #008000;
+}
+
+.product-color-opt .product-color-no:nth-child(3) {
+    background-color: #FF0C00;
+}
+
+.product-color-opt .product-color-no:last-child {
+    background-color: #000;
+}
+
+
+.product-buy-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.container:hover .product-img {
+    transform: translateY(-80px) rotate(-30deg);
+}
+
+.container:hover .product-name {
+    transform: translate(-40px, -40px)
+}
+
+.container:hover .product-price {
+    transform: translate(-117px, -40px)
+}
+
+.container:hover .product-buy-option {
+    visibility: visible;
+    opacity: 100;
+    margin-top: -10px;
+}
